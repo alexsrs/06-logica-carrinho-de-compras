@@ -1,0 +1,12 @@
+{
+  "name": "06-logica-carrinho-de-compras",
+  "version": "1.0.0",
+  "description": "Lógica para backend de um carrinho de compras similar a shopee",
+  "license": "ISC",
+  "author": "alexsrs",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
