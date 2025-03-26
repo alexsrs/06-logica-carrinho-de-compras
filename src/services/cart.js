@@ -43,8 +43,23 @@ async function removeQuantityFromItem(userCart, index) {
     const deleteIndex = index -1; // transfoma o index do usuário para o index do array
     if (index >= 0 && index <= userCart.length) {    
         userCart.splice(deleteIndex, 1);
+    }   
+}
+
+async function removeItem(userCart, item){
+    const indexFound = userCart.findIndex((p) => p.name === item.name);
+    //console.log(indexFound);
+    if (indexFound == -1){
+        console.log('Item não encontrado');
+        return;
+    } 
+    if (userCart[indexFound].quantity > 1){
+        userCart[indexFound].quantity -- ;
+    } else if (userCart[indexFound].quantity == 1){
+        userCart.splice(indexFound, 1);
+        console.log('Item removido do carrinho');
     }
-    
+    //console.log(userCart[indexFound].quantity);
 }
 
 async function listItemsFromCart(userCart) {
@@ -69,12 +84,6 @@ export {
     removeItemFromCart,
     listItemsFromCart,
     clearCart,
-    removeQuantityFromItem
-}
-
-
-
-
-
-
-
+    removeQuantityFromItem,
+    removeItem
+};

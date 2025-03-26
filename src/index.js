@@ -15,15 +15,21 @@ await cartService.addItemToCart(myCart, item2);
 await cartService.addItemToCart(myWishlist, item3);
 await cartService.addItemToCart(myCart, item4);
 
+
+await cartService.removeItem(myCart, item1);
+await cartService.removeItem(myCart, item2);
+
 //await cartService.removeItemFromCart(myCart, item2.name);
-await cartService.removeItemFromCart(myCart, item2.name);
+//await cartService.removeItemFromCart(myCart, item2.name);
 await cartService.listItemsFromCart(myCart);
 
 await cartService.calculateTotalCart(myCart);
 
-await cartService.removeQuantityFromItem(myCart, 2);
+//await cartService.removeQuantityFromItem(myCart, 2);
 
-await cartService.listItemsFromCart(myCart);
+//await cartService.listItemsFromCart(myCart);
 
-await cartService.calculateTotalCart(myCart);
-//await cartService.listItemsFromCart(myWishlist);
+//await cartService.calculateTotalCart(myCart);
+
+
+//await cartService.listItemsFromCart(myWishlist); 
